@@ -1,0 +1,75 @@
+Content File: data/content.csv loaded successfully.
+TV Series File: data/tvseries.txt loaded successfully.
+Welcome Demo to StreamFlix
+Select an option from below:
+1. View videos
+2. View audios
+3. View games
+4. View user settings
+5. Exit StreamFlix
+Select an option from below:
+1. Watch movies
+2. Watch tv series
+3. Return to main menu
+================================================================================
+                             MOVIE Lists
+================================================================================
+ACTION    | [Silent ...] |  Firesto...  |  Shadow ...  |
+ROMANCE   |  Letters...  |  Autumn ...  |
+COMEDY    |  Just Fr...  |
+================================================================================
+=========Navigation Menu==========
+Use the options below to navigate:
+U to move up
+D to move down
+L to move left
+R to move right
+X to select movie
+Q to exit movie canvas
+=========MOVIE Actions==========
+Select an option below:
+V to View movie details
+P to Play movie
+W to Add to watchlist/playlist
+Q to Exit
+Movie Details:
+ID: m1
+Name: Silent Pursuit
+Year: 1985
+Description: A relentless detective chases a cunning fugitive across the city
+Review Rating: 4.5
+Genre: ACTION
+Cast: Michael Carter
+Total Time (mins): 120
+=========MOVIE Actions==========
+Select an option below:
+V to View movie details
+P to Play movie
+W to Add to watchlist/playlist
+Q to Exit
+================================================================================
+                             MOVIE Lists
+================================================================================
+ACTION    | [Silent ...] |  Firesto...  |  Shadow ...  |
+ROMANCE   |  Letters...  |  Autumn ...  |
+COMEDY    |  Just Fr...  |
+================================================================================
+=========Navigation Menu==========
+Use the options below to navigate:
+U to move up
+D to move down
+L to move left
+R to move right
+X to select movie
+Q to exit movie canvas
+Select an option from below:
+1. Watch movies
+2. Watch tv series
+3. Return to main menu
+Select an option from below:
+1. View videos
+2. View audios
+3. View games
+4. View user settings
+5. Exit StreamFlix
+Thank you for watching StreamFlix. Come back again.
