@@ -9,3 +9,6 @@ __pycache__/
 *.log
 .bash_history
 data/userSessionData.csv
+build/
+.venv/
+
