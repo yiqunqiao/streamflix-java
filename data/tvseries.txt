@@ -1,0 +1,21 @@
+tv_series_id,season_number,episode_name,episode_desc,total_time_in_mins
+t1,1,First Blood,A detective uncovers the city's criminal underbelly,50
+t1,1,Double Cross,Alliances shift among rival gangs,52
+t1,2,New Alliances,A fragile truce forms between two crime families,54
+t1,2,Breaking Point,An informant threatens to expose the syndicate,49
+t1,3,Endgame,The final confrontation approaches,58
+t2,1,The Blueprint,The crew studies the palace vault layout,47
+t2,1,Inside Job,A palace guard is recruited to help the heist,51
+t2,2,The Vault,The crew attempts to breach the royal vault,55
+t2,2,Double Bluff,A betrayal threatens to unravel the plan,50
+t2,3,Getaway,The crew makes a daring escape with the jewels,60
+t3,1,Departure,The crew sets off on their first deep space mission,53
+t3,1,Signal Lost,The crew loses contact with mission control,56
+t3,2,First Contact,The crew encounters an unknown alien vessel,58
+t3,2,Quarantine,A mysterious illness spreads aboard the ship,52
+t3,3,Homeward Bound,The crew searches for a way back to Earth,60
+t4,1,Groundhog Day,A scientist wakes up to relive the same day again,45
+t4,1,Deja Vu,Small changes begin to ripple through the loop,47
+t4,2,Breaking Free,The scientist searches for a way to escape the loop,50
+t4,2,Ripple Effect,A decision creates unexpected consequences,48
+t4,3,New Timeline,The loop finally breaks revealing a new reality,55
