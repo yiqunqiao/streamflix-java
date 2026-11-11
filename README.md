@@ -1,19 +1,71 @@
-# StreamFlix++
+# StreamFlix++ · Media Library
 
-A Java console application for managing movies, television series, songs, podcasts and games. Built on the COMP90041 course framework by Yiqun Qiao.
+[![Checks](https://github.com/yiqunqiao/streamflix-java/actions/workflows/ci.yml/badge.svg)](https://github.com/yiqunqiao/streamflix-java/actions/workflows/ci.yml)
+![Java](https://img.shields.io/badge/Java-21-155e75)
+![Interface](https://img.shields.io/badge/Interface-Console-334155)
 
-## Features
+**Browse five media types, manage watchlists and playlists, and resume your session from CSV.**
 
-- Content models built with inheritance, interfaces and enums, including television seasons and episodes.
-- Watch history, watchlists and audio playlists, with duplicate handling and list updates.
-- Content and user-session file loading, CSV persistence, command-line validation and exception handling.
+A Java object-oriented application with a keyboard-driven catalogue. Playback is simulated in the console. The repository includes the catalogue and episode data needed to run it locally.
 
-## Source snapshot
+![Actual console output from the bundled catalogue](docs/demo.svg)
 
-The 27 Java files in `src/` were copied from the saved Assignment 2 Ed workspace. Student ID and email header lines were removed from this upload copy; application logic and original attribution were retained.
+## Run in one command
 
-## Dependencies and validation
+Install JDK 21 and Python 3, then run from the repository directory:
 
-A JDK and the matching course-format content files are required. The original course datasets, personal session records, reports and assessment documents are not included. `StreamingApp` accepts four arguments: user name, number of genres, content file and television-series file. It reads or writes `data/userSessionData.csv` relative to the working directory.
+```sh
+python3 run.py
+```
 
-The source snapshot was checked for completeness and personal information. Java compilation and end-to-end execution have not been performed in this environment.
+The launcher compiles all 27 Java files and starts a demo session. No Maven, Gradle, database or course-platform account is needed.
+
+To use your own name or data files:
+
+```sh
+python3 run.py "Yiqun" 3 data/content.csv data/tvseries.txt
+```
+
+Arguments: user name, genre-row count, catalogue CSV, and television-episode file. `U/D/L/R` move the cursor, `X` selects an item, and `Q` returns. Enter `5` in the main menu to save and exit.
+
+## What it does
+
+| Area | Behaviour |
+| --- | --- |
+| Catalogue | Movies, TV series with seasons and episodes, songs, podcasts and games |
+| Navigation | Genre-based media grids, keyboard movement and content details |
+| User lists | Watch history, video watchlists and named audio playlists |
+| Persistence | Saves and restores CSV sessions; prevents duplicate list items |
+| Validation | Checks command-line arguments, malformed rows, missing files and menu input |
+
+Sessions are created locally at `data/userSessionData.csv` and excluded from version control. The two bundled input files are fictional course sample catalogues.
+
+## Design
+
+```mermaid
+classDiagram
+    Content <|-- VideoContent
+    Content <|-- AudioContent
+    Content <|-- Game
+    VideoContent <|-- Movie
+    VideoContent <|-- TVSeries
+    AudioContent <|-- Song
+    AudioContent <|-- Podcast
+    TVSeries *-- Season
+    Season *-- Episode
+```
+
+`canvas/` handles menus and navigation, `content/` holds domain objects, and `loader/` parses catalogue, episode and session files. Enums and typed exceptions keep input rules separate from menu logic.
+
+## Verification
+
+```sh
+python3 test_app.py
+```
+
+**Reference run: 11 November 2026 · OpenJDK 21.0.13 · Python 3.12 · 6/6 tests passed.** Tests launch real Java processes in temporary directories and cover all media canvases, watchlist deduplication, playback history, case-insensitive playlist lookup, session restoration, malformed rows and invalid arguments. [Full checklist](docs/validation.md).
+
+## Project context
+
+Developed by Yiqun Qiao within the University of Melbourne COMP90041 framework. Original source attribution is retained. This portfolio version restores the complete `Canvas.java` from the saved Ed workspace and adds bundled inputs, a launcher, regression tests and documentation.
+
