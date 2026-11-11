@@ -496,4 +496,38 @@ public class Canvas {
             case DOWN:
                 if (cursorRow >= canvas.length - 1 || canvas[cursorRow + 1] == null) {
                     System.out.println(Constants.CANNOT_MOVE_THERE);
+                    return;
+                }
+
+                cursorRow++;
+                break;
+            case LEFT:
+                if (cursorCol <= 0) {
+                    System.out.println(Constants.CANNOT_MOVE_THERE);
+                    return;
+                }
+
+                cursorCol--;
+                break;
+            case RIGHT:
+                if (cursorCol >= canvas[cursorRow].length - 1) {
+                    System.out.println(Constants.CANNOT_MOVE_THERE);
+                    return;
+                }
+
+                cursorCol++;
+                break;
+        }
+
+        // A shorter row may require moving the cursor to its last column.
+        if (direction == DIRECTION.UP || direction == DIRECTION.DOWN) {
+            int lastColInRow = canvas[cursorRow].length - 1;
+            if (cursorCol > lastColInRow) {
+                cursorCol = lastColInRow;
+            }
+        }
+    }
+
+
+}
 
